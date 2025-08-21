@@ -1,375 +1,347 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TH noodles – Bún Bò Huế</title>
-  <meta name="description" content="TH noodles - Bún bò Huế chuẩn vị. Đặt món online, giao nhanh." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV - Nguyễn Thế Đức | Data Analyst Intern</title>
+  <meta name="description" content="CV trực tuyến của Nguyễn Thế Đức - Data Analyst Intern." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --blue:#1f6feb;        /* xanh dương chủ đạo */
-      --blue-2:#0b3d91;      /* xanh đậm */
-      --bg:#0a0f1a;
-      --card:#111827;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --ok:#22c55e;
-      --warn:#f59e0b;
-      --danger:#ef4444;
+      --bg:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#ff7a1a;    /* cam cho title */
+      --accent-2:#e96b00;
+      --chip:#f6f7f9;
+      --border:#e5e7eb;
       --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --shadow: 0 8px 28px rgba(0,0,0,.07);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:#0b1220;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:#9cc1ff;text-decoration:none}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    img{max-width:100%;display:block}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{opacity:.9}
+
+    /* Header / Hero */
     header{
       position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(140%) blur(6px);
-      background:linear-gradient(180deg, rgba(10,15,26,.9), rgba(10,15,26,.6));
-      border-bottom:1px solid rgba(255,255,255,.06)
+      background:rgba(255,255,255,.85);
+      backdrop-filter: saturate(140%) blur(8px);
+      border-bottom:1px solid var(--border);
     }
-    .container{max-width:1100px;margin:auto;padding:0 16px}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:10px;align-items:center}
-    .logo{
-      width:42px;height:42px;border-radius:50%;
-      background:radial-gradient(120px 120px at 30% 30%, #61a0ff, #1f6feb 60%, #0b3d91);
-      box-shadow:0 0 0 3px rgba(255,255,255,.05), var(--shadow)
+    .nav{
+      max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;
+      padding:14px 18px;
     }
-    .brand h1{font-size:20px;margin:0;font-weight:800;letter-spacing:.4px}
-    .menu a{margin-left:18px;font-weight:600;opacity:.9}
+    .nav .brand{display:flex;gap:12px;align-items:center}
+    .avatar{
+      width:44px;height:44px;border-radius:50%;
+      background: radial-gradient(120px 120px at 30% 30%, #ffd3b0, #ff9e57 60%, #ff7a1a);
+      box-shadow:0 0 0 3px #fff, 0 6px 20px rgba(0,0,0,.08);
+    }
+    .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.2px}
+    .menu a{margin-left:16px;font-weight:600;color:#334155}
+    .menu a:hover{color:var(--accent)}
+
+    .container{max-width:1040px;margin:auto;padding:0 18px}
     .hero{
-      display:grid;grid-template-columns:1.2fr .8fr;gap:28px;
-      padding:40px 0 28px
+      display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch;
+      padding:28px 0;
     }
-    .card{
-      background:linear-gradient(180deg,#0f172a,#0b1220);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:var(--radius); box-shadow:var(--shadow)
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .intro{padding:22px}
+    .hi{font-size:14px;color:var(--muted);margin:0 0 6px}
+    .name{font-size:34px;margin:0 0 6px;font-weight:800;line-height:1.15}
+    .role{font-size:18px;color:#334155;margin:0 0 14px;font-weight:600}
+    .quick{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 0}
+    .chip{
+      background:var(--chip);border:1px solid var(--border);border-radius:999px;
+      padding:8px 12px;font-size:13px;display:inline-flex;gap:8px;align-items:center
     }
-    .hero .left{padding:26px}
-    .title{font-size:38px;line-height:1.1;margin:0 0 10px}
-    .subtitle{color:var(--muted);margin:0 0 18px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
-    .badge{padding:8px 12px;border-radius:999px;background:#0b1a34;border:1px solid rgba(255,255,255,.08);font-size:13px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{
-      appearance:none;border:0;cursor:pointer;font-weight:700;
-      padding:12px 18px;border-radius:12px
+    .contacts{padding:22px}
+    .row{display:flex;gap:12px;align-items:center;margin:8px 0;color:#0f172a}
+    .row .lbl{font-weight:600;width:92px;color:#334155}
+
+    /* Section */
+    section{padding:20px 0}
+    .sec{margin-top:12px}
+    .sec h2{
+      margin:0 0 12px;font-size:22px;font-weight:800;color:var(--accent);
+      letter-spacing:.3px
     }
-    .btn.primary{background:linear-gradient(180deg,var(--blue),var(--blue-2));color:white;box-shadow:0 8px 18px rgba(31,111,235,.35)}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.12);color:var(--text)}
-    .hero .right{
-      display:grid;grid-template-rows:180px 1fr;gap:14px
-    }
-    .info, .open{
-      padding:16px 18px
-    }
-    .info h3,.open h3{margin:0 0 10px}
-    .row{display:flex;gap:10px;align-items:center;margin:6px 0;color:#c7d2fe}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    section{padding:26px 0}
-    h2{margin:0 0 12px;font-size:26px}
-    .items{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .item{background:linear-gradient(180deg,#0f172a,#0b1220);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
-    .item .name{font-weight:700}
-    .item .desc{color:var(--muted);font-size:14px}
-    .item .price{font-weight:800}
-    .item button{margin-top:auto}
-    .order{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-    .table{width:100%;border-collapse:collapse}
-    .table th,.table td{padding:10px;border-bottom:1px dashed rgba(255,255,255,.08);text-align:left}
-    .sum{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-    .field{display:flex;flex-direction:column;gap:6px;margin:10px 0}
-    input,select,textarea{
-      background:#0b1220;border:1px solid rgba(255,255,255,.1);color:var(--text);
-      padding:12px;border-radius:10px;outline:none
-    }
-    footer{padding:24px 0;color:#9aa5b1}
-    .note{font-size:13px;color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{display:grid;gap:12px}
+    .item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;transition:transform .25s ease, box-shadow .25s ease}
+    .item:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.08)}
+    .item .title{font-weight:700;margin:0 0 4px}
+    .item .meta{font-size:13px;color:var(--muted);margin:0 0 8px}
+    .item .desc{margin:0;color:#111827}
+
+    /* Skills */
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skill{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px}
+    .skill h3{margin:0 0 10px;font-size:14px;letter-spacing:.3px;color:var(--accent-2)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:var(--chip);border:1px solid var(--border);padding:7px 10px;border-radius:999px;font-size:13px}
+
+    /* CTA */
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
+    .btn.primary{background:linear-gradient(180deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 18px rgba(255,122,26,.25)}
+    .btn.ghost{background:#fff;border:1px solid var(--border);color:#0f172a}
+
+    /* Footer */
+    footer{padding:22px 0;border-top:1px solid var(--border);color:#64748b}
+
+    /* Effects: reveal on scroll */
+    .reveal{opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1; transform: none}
+
     @media (max-width:960px){
       .hero{grid-template-columns:1fr}
-      .items{grid-template-columns:repeat(2,1fr)}
-      .order{grid-template-columns:1fr}
+      .skills{grid-template-columns:repeat(2,1fr)}
+      .grid-2{grid-template-columns:1fr}
     }
     @media (max-width:640px){
-      .items{grid-template-columns:1fr}
-      .title{font-size:30px}
+      .name{font-size:28px}
+      .skills{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- NAV -->
   <header>
-    <div class="container nav">
+    <div class="nav">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>TH noodles · Bún Bò Huế</h1>
+        <div class="avatar" aria-hidden="true"></div>
+        <h1>Nguyễn Thế Đức</h1>
       </div>
       <nav class="menu">
-        <a href="#menu">Thực đơn</a>
-        <a href="#order">Đặt món</a>
-        <a href="#contact">Liên hệ</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#hoc-van">Học vấn</a>
+        <a href="#du-an">Dự án</a>
+        <a href="#ky-nang">Kỹ năng</a>
+        <a href="#lien-he">Liên hệ</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
-      <div class="left card">
-        <h2 class="title">Bún Bò Huế chuẩn vị · nóng hổi mỗi ngày</h2>
-        <p class="subtitle">Nước dùng đậm đà, bò mềm – giò thơm. TH noodles phục vụ tại quán & giao tận nơi.</p>
-        <div class="badges">
-          <span class="badge">🌶️ Topping đa dạng</span>
-          <span class="badge">🕘 Mở cửa: 6:00 – 21:00</span>
-          <span class="badge">🚚 Giao nhanh trong 5km</span>
+      <div class="intro card reveal">
+        <p class="hi">Xin chào 👋</p>
+        <h2 class="name">Tôi là <span style="color:var(--accent)">Nguyễn Thế Đức</span></h2>
+        <p class="role">Thực tập sinh Data Analyst (DA Intern)</p>
+        <p style="margin:0 0 6px">
+          Đam mê dữ liệu và trực quan hóa, tôi tập trung vào làm sạch dữ liệu, phân tích mô tả, xây dashboard
+          và kể chuyện bằng dữ liệu để hỗ trợ ra quyết định.
+        </p>
+
+        <div class="quick">
+          <span class="chip">📊 Exploratory Data Analysis</span>
+          <span class="chip">📈 Dashboard: Power BI / Excel</span>
+          <span class="chip">🐍 Python (Pandas, Matplotlib)</span>
+          <span class="chip">🗄️ SQL (MySQL/SQL Server)</span>
         </div>
+
         <div class="cta">
-          <a class="btn primary" href="#order">Đặt bún ngay</a>
-          <a class="btn ghost" href="#menu">Xem thực đơn</a>
+          <a class="btn primary" href="#du-an">Xem dự án</a>
+          <a class="btn ghost" href="#lien-he">Liên hệ nhanh</a>
         </div>
       </div>
 
-      <div class="right">
-        <div class="info card">
-          <h3>Giới thiệu quán</h3>
-          <div class="grid">
-            <div>
-              <div class="row">🏪 <strong>TH noodles</strong></div>
-              <div class="row">📍 <span id="cfg-address">45 Nguyễn Văn A, Q. Hải Châu, Đà Nẵng</span></div>
-              <div class="row">📞 <a id="cfg-phone-link" href="tel:0900000000"><span id="cfg-phone">0900 000 000</span></a></div>
-            </div>
-            <div>
-              <div class="row">✉️ <a id="cfg-email" href="mailto:orders@thnoodles.vn">orders@thnoodles.vn</a></div>
-              <div class="row">🌐 <a href="#">facebook.com/thnoodles</a></div>
-              <div class="row">🧾 Hóa đơn VAT (nếu cần)</div>
-            </div>
+      <aside class="contacts card reveal" style="display:flex;flex-direction:column;justify-content:center">
+        <div class="row"><span class="lbl">Họ tên</span> <span><strong>Nguyễn Thế Đức</strong></span></div>
+        <div class="row"><span class="lbl">Vị trí</span> <span>Data Analyst Intern</span></div>
+        <div class="row"><span class="lbl">Email</span> <a href="mailto:nguyenthed​uc@example.com">nguyenthed​uc@example.com</a></div>
+        <div class="row"><span class="lbl">Điện thoại</span> <a href="tel:0900000000">0900 000 000</a></div>
+        <div class="row"><span class="lbl">Địa chỉ</span> <span>Đà Nẵng, Việt Nam</span></div>
+        <div class="row"><span class="lbl">LinkedIn</span> <a href="#" target="_blank" rel="noopener">linkedin.com/in/ntduc</a></div>
+        <div class="row"><span class="lbl">GitHub</span> <a href="#" target="_blank" rel="noopener">github.com/ducnt67</a></div>
+      </aside>
+    </section>
+
+    <!-- GIỚI THIỆU NGẮN -->
+    <section id="gioi-thieu" class="sec reveal">
+      <h2>Giới thiệu</h2>
+      <div class="item">
+        <p class="desc" style="margin:0">
+          Tôi là sinh viên năm 2, định hướng theo Data Analyst. Mục tiêu ngắn hạn là hoàn thiện kỹ năng
+          phân tích dữ liệu (SQL, Python, Power BI), thực hành trên dữ liệu thực tế và đóng góp vào các sản phẩm báo cáo,
+          dashboard giúp đội ngũ đưa ra quyết định nhanh và chính xác.
+        </p>
+      </div>
+    </section>
+
+    <!-- HỌC VẤN & CHỨNG CHỈ -->
+    <section id="hoc-van" class="sec reveal">
+      <h2>Trình độ học vấn & Chứng chỉ</h2>
+      <div class="grid-2">
+        <div class="list">
+          <div class="item">
+            <p class="title">Đại học Kinh tế Đà Nẵng</p>
+            <p class="meta">Chuyên ngành: Thống kê - Tin học | 2023 – nay</p>
+            <p class="desc">Các môn tiêu biểu: Xác suất - Thống kê, Cơ sở dữ liệu, Phân tích dữ liệu, Lập trình Python, Hệ quản trị CSDL.</p>
           </div>
         </div>
-        <div class="open card">
-          <h3>Giờ mở cửa</h3>
-          <div class="grid">
-            <div>
-              <div class="row">Thứ 2 – CN</div>
-              <div class="row">06:00 – 21:00</div>
-            </div>
-            <div>
-              <div class="row">Khu vực giao</div>
-              <div class="row">≤ 5km (phí từ 10k)</div>
-            </div>
+        <div class="list">
+          <div class="item">
+            <p class="title">Chứng chỉ/Khóa học</p>
+            <p class="meta">Tự học & online</p>
+            <ul style="margin:6px 0 0 18px">
+              <li>Excel cho Phân tích dữ liệu (Pivot, Power Query)</li>
+              <li>SQL căn bản đến nâng cao</li>
+              <li>Python Data Analysis (Pandas, Matplotlib)</li>
+              <li>Power BI: Data Modeling & DAX cơ bản</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Menu -->
-    <section id="menu">
-      <h2>Thực đơn</h2>
-      <p class="note">Giá đã bao gồm rau sống & chanh ớt. Có thể chọn mức cay khi đặt.</p>
-      <div class="items" id="menu-list">
-        <!-- Items render bằng JS -->
-      </div>
-    </section>
-
-    <!-- Order -->
-    <section id="order">
-      <h2>Đặt món online</h2>
-      <div class="order">
-        <!-- Cart -->
-        <div class="card" style="padding:16px">
-          <h3>Giỏ hàng</h3>
-          <table class="table" id="cart-table">
-            <thead>
-              <tr><th>Món</th><th>Số lượng</th><th>Giá</th><th>Tạm tính</th><th></th></tr>
-            </thead>
-            <tbody id="cart-body">
-              <tr><td colspan="5" class="note">Chưa có món nào. Hãy chọn từ thực đơn.</td></tr>
-            </tbody>
-          </table>
-          <div class="sum">
-            <strong>Tổng cộng:</strong>
-            <strong id="grand">0₫</strong>
+    <!-- DỰ ÁN -->
+    <section id="du-an" class="sec reveal">
+      <h2>Dự án tiêu biểu</h2>
+      <div class="list">
+        <div class="item">
+          <p class="title">Phân tích Doanh số Cửa hàng Bán lẻ</p>
+          <p class="meta">Excel + Power BI | 2025</p>
+          <p class="desc">Làm sạch dữ liệu (Power Query), xây mô hình dữ liệu, tạo dashboard doanh thu theo thời gian,
+            mặt hàng, khu vực. Đề xuất combo sản phẩm giúp tăng 8–12% doanh thu tháng cao điểm.</p>
+          <div class="cta" style="margin-top:8px">
+            <a class="btn ghost" href="#" target="_blank">Xem dashboard</a>
+            <a class="btn ghost" href="#" target="_blank">Mô tả dự án</a>
           </div>
         </div>
 
-        <!-- Info -->
-        <form class="card" id="order-form" style="padding:16px">
-          <h3>Thông tin người đặt</h3>
-          <div class="field">
-            <label>Họ tên *</label>
-            <input required name="name" placeholder="Nguyễn Văn B">
+        <div class="item">
+          <p class="title">EDA Dữ liệu CPI & các yếu tố vĩ mô</p>
+          <p class="meta">Python (Pandas/Matplotlib) | 2025</p>
+          <p class="desc">Tiền xử lý dữ liệu CPI, giá dầu, tỷ giá; trực quan hóa xu hướng, tương quan.
+            Viết báo cáo và gợi ý đặc trưng cho mô hình dự báo.</p>
+          <div class="cta" style="margin-top:8px">
+            <a class="btn ghost" href="#" target="_blank">Notebook</a>
+            <a class="btn ghost" href="#" target="_blank">Report</a>
           </div>
-          <div class="field">
-            <label>Số điện thoại *</label>
-            <input required name="phone" placeholder="090..." pattern="[0-9\s+]{8,13}">
+        </div>
+
+        <div class="item">
+          <p class="title">Mini ETL: Thu thập & tổng hợp dữ liệu công khai</p>
+          <p class="meta">Python + Google Sheets API | 2024</p>
+          <p class="desc">Viết script tự động lấy dữ liệu định kỳ, chuẩn hóa và đẩy sang Google Sheets để nhóm theo dõi.</p>
+          <div class="cta" style="margin-top:8px">
+            <a class="btn ghost" href="#" target="_blank">Mã nguồn</a>
           </div>
-          <div class="field">
-            <label>Hình thức nhận *</label>
-            <select name="method" required>
-              <option value="pickup">Đến lấy tại quán</option>
-              <option value="delivery">Giao tận nơi</option>
-            </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- KỸ NĂNG -->
+    <section id="ky-nang" class="sec reveal">
+      <h2>Kỹ năng</h2>
+      <div class="skills">
+        <div class="skill">
+          <h3>Ngôn ngữ lập trình</h3>
+          <div class="tags">
+            <span class="tag">Python (Pandas, Matplotlib)</span>
+            <span class="tag">SQL (MySQL/SQL Server)</span>
+            <span class="tag">C# (cơ bản)</span>
+            <span class="tag">JavaScript (cơ bản)</span>
           </div>
-          <div class="field" id="address-field" style="display:none">
-            <label>Địa chỉ giao</label>
-            <input name="address" placeholder="Số nhà, đường, quận...">
+        </div>
+        <div class="skill">
+          <h3>Công cụ phân tích</h3>
+          <div class="tags">
+            <span class="tag">Excel (Pivot, Power Query)</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">Git/GitHub</span>
           </div>
-          <div class="field">
-            <label>Ghi chú thêm</label>
-            <textarea name="note" rows="3" placeholder="Ít cay / Không hành / Giao giờ nghỉ trưa ..."></textarea>
+        </div>
+        <div class="skill">
+          <h3>Ngoại ngữ</h3>
+          <div class="tags">
+            <span class="tag">Tiếng Anh: Đọc tài liệu, giao tiếp cơ bản</span>
           </div>
-          <button class="btn primary" type="submit">Gửi đơn đặt</button>
-          <div class="note" style="margin-top:8px">Sau khi gửi, cửa hàng sẽ gọi xác nhận đơn.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIÊN HỆ -->
+    <section id="lien-he" class="sec reveal">
+      <h2>Liên hệ</h2>
+      <div class="grid-2">
+        <div class="item">
+          <p class="desc" style="margin:0">
+            Tôi luôn sẵn sàng hợp tác trong các dự án phân tích dữ liệu, dashboard và báo cáo.
+            Hãy liên hệ nếu anh/chị quan tâm:
+          </p>
+          <ul style="margin:8px 0 0 18px">
+            <li>Email: <a href="mailto:nguyenthed​uc@example.com">nguyenthed​uc@example.com</a></li>
+            <li>Điện thoại: <a href="tel:0900000000">0900 000 000</a></li>
+            <li>LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/ntduc</a></li>
+          </ul>
+        </div>
+        <form class="item" onsubmit="sendMailto(event)">
+          <p class="title" style="margin:0 0 8px">Gửi lời nhắn nhanh</p>
+          <div style="display:grid;gap:8px">
+            <input required name="name" placeholder="Họ tên">
+            <input required name="email" placeholder="Email">
+            <textarea name="message" rows="4" placeholder="Nội dung liên hệ"></textarea>
+            <button class="btn primary" type="submit">Gửi</button>
+          </div>
+          <p class="desc" style="margin:8px 0 0;color:var(--muted);font-size:13px">
+            (Form dùng <code>mailto:</code> – phù hợp GitHub Pages. Có thể nâng cấp về Google Sheets / Form backend sau.)
+          </p>
         </form>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Liên hệ nhanh</h2>
-      <div class="grid">
-        <a class="btn ghost" href="tel:0900000000">📞 Gọi: 0900 000 000</a>
-        <a class="btn ghost" href="https://zalo.me/" target="_blank" rel="noopener">💬 Nhắn Zalo</a>
-        <a class="btn ghost" href="mailto:orders@thnoodles.vn">✉️ Email: orders@thnoodles.vn</a>
-        <a class="btn ghost" href="#menu">📋 Xem thực đơn</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      © <span id="year"></span> TH noodles · Made with 💙
-    </div>
+  <footer class="container">
+    © <span id="year"></span> Nguyễn Thế Đức — Data Analyst Intern. Made with 🧡
   </footer>
 
   <script>
-    // ====== Cấu hình quán (thay cho đúng của bạn) ======
-    const CONFIG = {
-      shopName: "TH noodles",
-      phone: "0900 000 000",
-      email: "orders@thnoodles.vn",     // Email nhận đơn (dùng mailto)
-      address: "45 Nguyễn Văn A, Q. Hải Châu, Đà Nẵng",
-      menu: [
-        { id: "bbh-nho",  name: "Bún bò Huế (Tô nhỏ)",  desc:"Thịt bò nạm + chả",  price: 35000 },
-        { id: "bbh-vua",  name: "Bún bò Huế (Tô vừa)",  desc:"Bò nạm + chả + giò", price: 45000 },
-        { id: "bbh-dac",  name: "Bún bò Huế đặc biệt",   desc:"Bắp bò + giò heo",   price: 55000 },
-        { id: "cha",      name: "Chả Huế",               desc:"Chả lát thêm",       price: 10000 },
-        { id: "huyet",    name: "Huyết",                 desc:"Thêm topping",       price: 5000  },
-        { id: "tra-da",   name: "Trà đá",                desc:"Ly mát lạnh",        price: 3000  },
-      ]
-    };
-
-    // ====== Render thông tin ======
-    document.getElementById('cfg-address').textContent = CONFIG.address;
-    document.getElementById('cfg-phone').textContent   = CONFIG.phone;
-    document.getElementById('cfg-phone-link').href     = 'tel:' + CONFIG.phone.replace(/\s/g,'');
-    const emailEl = document.getElementById('cfg-email');
-    if(emailEl){ emailEl.textContent = CONFIG.email; emailEl.href = 'mailto:'+CONFIG.email; }
+    // Năm hiện tại
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // ====== Render menu ======
-    const fmt = n => n.toLocaleString('vi-VN')+'₫';
-    const list = document.getElementById('menu-list');
-    CONFIG.menu.forEach(m=>{
-      const div = document.createElement('div');
-      div.className = 'item';
-      div.innerHTML = `
-        <div class="name">${m.name}</div>
-        <div class="desc">${m.desc}</div>
-        <div class="price">${fmt(m.price)}</div>
-        <button class="btn primary" data-add="${m.id}">+ Thêm</button>
-      `;
-      list.appendChild(div);
-    });
-
-    // ====== Giỏ hàng ======
-    const cart = {};
-    function redrawCart(){
-      const body = document.getElementById('cart-body');
-      body.innerHTML = '';
-      const entries = Object.entries(cart);
-      if(!entries.length){
-        body.innerHTML = '<tr><td colspan="5" class="note">Chưa có món nào. Hãy chọn từ thực đơn.</td></tr>';
-        document.getElementById('grand').textContent = fmt(0);
-        return;
-      }
-      let sum = 0;
-      entries.forEach(([id,qty])=>{
-        const item = CONFIG.menu.find(x=>x.id===id);
-        const row = document.createElement('tr');
-        const sub = item.price*qty; sum+=sub;
-        row.innerHTML = `
-          <td>${item.name}</td>
-          <td>
-            <button class="btn ghost" data-dec="${id}">–</button>
-            <span style="display:inline-block;min-width:26px;text-align:center">${qty}</span>
-            <button class="btn ghost" data-inc="${id}">+</button>
-          </td>
-          <td>${fmt(item.price)}</td>
-          <td>${fmt(sub)}</td>
-          <td><button class="btn ghost" data-del="${id}">✕</button></td>
-        `;
-        body.appendChild(row);
+    // Smooth scroll & reveal effect
+    document.querySelectorAll('.menu a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.startsWith('#')){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+        }
       });
-      document.getElementById('grand').textContent = fmt(sum);
-    }
-    document.addEventListener('click', e=>{
-      const add = e.target.getAttribute('data-add');
-      const inc = e.target.getAttribute('data-inc');
-      const dec = e.target.getAttribute('data-dec');
-      const del = e.target.getAttribute('data-del');
-      if(add){ cart[add] = (cart[add]||0)+1; redrawCart(); }
-      if(inc){ cart[inc] = (cart[inc]||0)+1; redrawCart(); }
-      if(dec){ cart[dec] = Math.max(1,(cart[dec]||1)-1); redrawCart(); }
-      if(del){ delete cart[del]; redrawCart(); }
     });
 
-    // ====== Form hành vi ======
-    const methodSel = document.querySelector('select[name="method"]');
-    const addressField = document.getElementById('address-field');
-    methodSel.addEventListener('change', ()=>{
-      addressField.style.display = methodSel.value==='delivery' ? 'block' : 'none';
-    });
+    const io = new IntersectionObserver((ents)=>{
+      ents.forEach(ent=>{
+        if(ent.isIntersecting){ ent.target.classList.add('show'); io.unobserve(ent.target); }
+      });
+    }, {threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // ====== Submit đơn: dùng mailto (phù hợp GitHub Pages) ======
-    document.getElementById('order-form').addEventListener('submit', (e)=>{
+    // Gửi mail nhanh (mailto)
+    function sendMailto(e){
       e.preventDefault();
-      const items = Object.entries(cart);
-      if(!items.length){ alert('Giỏ hàng đang trống. Hãy chọn món trước!'); return; }
-
-      const data = Object.fromEntries(new FormData(e.target).entries());
-      const total = items.reduce((s,[id,q])=>{
-        const it = CONFIG.menu.find(x=>x.id===id); return s+it.price*q;
-      },0);
-
-      const lines = items.map(([id,q])=>{
-        const it = CONFIG.menu.find(x=>x.id===id);
-        return `- ${it.name} × ${q} = ${fmt(it.price*q)}`;
-      }).join('%0D%0A');
-
-      const subject = encodeURIComponent(`[ĐƠN MỚI] ${data.name} - ${CONFIG.shopName}`);
-      const body =
-        `Khách hàng: ${data.name}%0D%0A`+
-        `SĐT: ${data.phone}%0D%0A`+
-        `Hình thức: ${data.method === 'delivery' ? 'GIAO TẬN NƠI' : 'ĐẾN LẤY'}%0D%0A`+
-        (data.method==='delivery' ? `Địa chỉ: ${data.address||''}%0D%0A` : '')+
-        `---%0D%0AĐơn hàng:%0D%0A${lines}%0D%0A`+
-        `Tổng cộng: ${fmt(total)}%0D%0A`+
-        (data.note ? `Ghi chú: ${encodeURIComponent(data.note)}%0D%0A` : '')+
-        `---%0D%0AĐơn gửi từ website: https://` + location.host;
-
-      // mở ứng dụng email để gửi đơn về shop
-      location.href = `mailto:${encodeURIComponent(CONFIG.email)}?subject=${subject}&body=${body}`;
-
-      // thông báo thân thiện
-      setTimeout(()=>alert('Đã mở ứng dụng Email để gửi đơn. Nếu bạn không dùng email, vui lòng gọi trực tiếp cửa hàng nhé!'), 400);
-    });
-
-    // Render lần đầu
-    redrawCart();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const email = f.email.value.trim();
+      const msg = (f.message.value || '').trim();
+      const subject = encodeURIComponent(`[CV] Liên hệ từ ${name}`);
+      const body = encodeURIComponent(
+        `Tên: ${name}\nEmail: ${email}\n\nNội dung:\n${msg}\n\nGửi từ CV Online.`
+      );
+      location.href = `mailto:nguyentheduc@example.com?subject=${subject}&body=${body}`;
+    }
   </script>
 </body>
 </html>
